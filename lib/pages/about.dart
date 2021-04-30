@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tender322/pages/post.dart';
-import 'package:tender322/pages/search.dart';
-
+import 'package:tender322/pages/search/search.dart';
 import 'account.dart';
 import 'favorites.dart';
 
@@ -9,13 +8,14 @@ class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey[800],
       appBar: AppBar(
+        backgroundColor: Colors.blueGrey[900],
         iconTheme: IconThemeData(
           color: Colors.black, //change your color here
         ),
         title:
             const Text("about the app", style: TextStyle(color: Colors.black)),
-        backgroundColor: Colors.blue,
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -68,7 +68,7 @@ class About extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.blueGrey[50],
+          backgroundColor: Colors.blueGrey[900],
           type: BottomNavigationBarType.fixed,
           elevation: 0.0,
           items: [

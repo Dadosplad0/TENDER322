@@ -2,18 +2,19 @@ import 'package:flutter/material.dart';
 import 'account.dart';
 import 'favorites.dart';
 import 'post.dart';
-import 'search.dart';
+import 'search/search.dart';
 
 class Location extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey[800],
       appBar: AppBar(
+        backgroundColor: Colors.blueGrey[900],
         iconTheme: IconThemeData(
           color: Colors.black, //change your color here
         ),
         title: const Text("location", style: TextStyle(color: Colors.black)),
-        backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -87,7 +88,7 @@ class Location extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.blueGrey[50],
+          backgroundColor: Colors.blueGrey[900],
           type: BottomNavigationBarType.fixed,
           elevation: 0.0,
           items: [

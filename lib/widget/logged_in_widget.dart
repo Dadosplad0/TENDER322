@@ -6,7 +6,7 @@ import 'package:tender322/pages/favorites.dart';
 import 'package:tender322/pages/location.dart';
 import 'package:tender322/pages/password.dart';
 import 'package:tender322/pages/post.dart';
-import 'package:tender322/pages/search.dart';
+import 'package:tender322/pages/search/search.dart';
 import 'package:tender322/pages/terms.dart';
 import 'package:tender322/provider/google_sign_in.dart';
 import 'package:provider/provider.dart';
@@ -17,12 +17,13 @@ class LoggedInWidget extends StatelessWidget {
     final user = FirebaseAuth.instance.currentUser;
 
     return Scaffold(
+      backgroundColor: Colors.blueGrey[800],
       appBar: AppBar(
+        backgroundColor: Colors.blueGrey[900],
         iconTheme: IconThemeData(
           color: Colors.black, //change your color here
         ),
         title: const Text("Logged in", style: TextStyle(color: Colors.black)),
-        backgroundColor: Colors.white,
       ),
       body: Container(
         alignment: Alignment.center,
@@ -132,7 +133,7 @@ class LoggedInWidget extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.blueGrey[50],
+          backgroundColor: Colors.blueGrey[900],
           type: BottomNavigationBarType.fixed,
           elevation: 0.0,
           items: [

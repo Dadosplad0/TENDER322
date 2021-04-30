@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tender322/pages/home_page.dart';
 import 'package:tender322/pages/password.dart';
 import 'package:tender322/pages/post.dart';
-import 'package:tender322/pages/search.dart';
+import 'package:tender322/pages/search/search.dart';
 import 'package:tender322/pages/terms.dart';
 import 'package:tender322/widget/logged_in_widget.dart';
 import 'package:tender322/widget/sign_up_widget.dart';
@@ -17,12 +17,13 @@ class Account extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey[800],
       appBar: AppBar(
+        backgroundColor: Colors.blueGrey[900],
         iconTheme: IconThemeData(
-          color: Colors.black, //change your color here
+          color: Colors.white, //change your color here
         ),
-        title: const Text("account", style: TextStyle(color: Colors.black)),
-        backgroundColor: Colors.white,
+        title: const Text("account", style: TextStyle(color: Colors.white)),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -37,7 +38,7 @@ class Account extends StatelessWidget {
                     child: Text(
                       "about the app",
                       style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontWeight: FontWeight.normal,
                           fontSize: 20),
                       textAlign: TextAlign.left,
@@ -60,7 +61,7 @@ class Account extends StatelessWidget {
                     child: Text(
                       "terms of use",
                       style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontWeight: FontWeight.normal,
                           fontSize: 20),
                       textAlign: TextAlign.left,
@@ -83,7 +84,7 @@ class Account extends StatelessWidget {
                     child: Text(
                       "change password",
                       style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontWeight: FontWeight.normal,
                           fontSize: 20),
                       textAlign: TextAlign.left,
@@ -106,7 +107,7 @@ class Account extends StatelessWidget {
                     child: Text(
                       "default location",
                       style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontWeight: FontWeight.normal,
                           fontSize: 20),
                       textAlign: TextAlign.left,
@@ -129,7 +130,7 @@ class Account extends StatelessWidget {
                     child: Text(
                       "sign up",
                       style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontWeight: FontWeight.normal,
                           fontSize: 20),
                       textAlign: TextAlign.left,
@@ -149,7 +150,7 @@ class Account extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.blueGrey[50],
+          backgroundColor: Colors.blueGrey[900],
           type: BottomNavigationBarType.fixed,
           elevation: 0.0,
           items: [

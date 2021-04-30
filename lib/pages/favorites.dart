@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:tender322/pages/post.dart';
-import 'package:tender322/pages/search.dart';
-
+import 'package:tender322/pages/search/search.dart';
 import 'account.dart';
 
 class Favorites extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey[800],
       appBar: AppBar(
+        backgroundColor: Colors.blueGrey[900],
         iconTheme: IconThemeData(
-          color: Colors.black, //change your color here
+          color: Colors.white, //change your color here
         ),
-        title: const Text("favorites", style: TextStyle(color: Colors.black)),
-        backgroundColor: Colors.white,
+        title: const Text("favorites", style: TextStyle(color: Colors.white)),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -136,7 +136,7 @@ class Favorites extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.blueGrey[50],
+          backgroundColor: Colors.blueGrey[900],
           type: BottomNavigationBarType.fixed,
           elevation: 0.0,
           items: [

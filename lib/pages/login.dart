@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tender322/pages/post.dart';
-import 'package:tender322/pages/search.dart';
+import 'package:tender322/pages/search/search.dart';
 import 'account.dart';
 import 'favorites.dart';
 import 'dart:async';

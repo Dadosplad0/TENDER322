@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:firebase_core/firebase_core.dart';
-
-import 'package:tender322/pages/search.dart';
+import 'package:tender322/pages/search/search.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
