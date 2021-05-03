@@ -1,19 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tender322/pages/home_page.dart';
-import 'package:tender322/pages/password.dart';
 import 'package:tender322/pages/post.dart';
 import 'package:tender322/pages/search/search.dart';
-import 'package:tender322/pages/terms.dart';
-import 'package:tender322/widget/logged_in_widget.dart';
-import 'package:tender322/widget/sign_up_widget.dart';
-import 'about.dart';
-import 'favorites.dart';
-import 'location.dart';
-import 'login.dart';
-import 'package:tender322/widget/background_painter.dart';
-import 'package:tender322/widget/google_signup_button_widget.dart';
+import '../favorites.dart';
+import '../account.dart';
 
-class Account extends StatelessWidget {
+class Services extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +14,7 @@ class Account extends StatelessWidget {
         iconTheme: IconThemeData(
           color: Colors.white, //change your color here
         ),
-        title: const Text("account", style: TextStyle(color: Colors.white)),
+        title: const Text("Services", style: TextStyle(color: Colors.white)),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -36,7 +27,7 @@ class Account extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "about the app",
+                      "Cleaning",
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.normal,
@@ -44,10 +35,7 @@ class Account extends StatelessWidget {
                       textAlign: TextAlign.left,
                     ),
                   ),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => About()));
-                  },
+                  onPressed: () {},
                 ),
               ),
               Divider(
@@ -59,7 +47,7 @@ class Account extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "terms of use",
+                      "Handiwork ",
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.normal,
@@ -67,10 +55,7 @@ class Account extends StatelessWidget {
                       textAlign: TextAlign.left,
                     ),
                   ),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Terms()));
-                  },
+                  onPressed: () {},
                 ),
               ),
               Divider(
@@ -82,7 +67,7 @@ class Account extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "change password",
+                      "Moving",
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.normal,
@@ -90,10 +75,7 @@ class Account extends StatelessWidget {
                       textAlign: TextAlign.left,
                     ),
                   ),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Password()));
-                  },
+                  onPressed: () {},
                 ),
               ),
               Divider(
@@ -105,7 +87,7 @@ class Account extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "default location",
+                      "-----------",
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.normal,
@@ -113,35 +95,7 @@ class Account extends StatelessWidget {
                       textAlign: TextAlign.left,
                     ),
                   ),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Location()));
-                  },
-                ),
-              ),
-              Divider(
-                color: Colors.grey,
-              ),
-              ButtonTheme(
-                child: FlatButton(
-                  padding: EdgeInsets.all(0),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "sign up",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.normal,
-                          fontSize: 20),
-                      textAlign: TextAlign.left,
-                    ),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => HomePagelogin()));
-                  },
+                  onPressed: () {},
                 ),
               ),
               Divider(
@@ -153,18 +107,19 @@ class Account extends StatelessWidget {
       ),
       bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.blueGrey[900],
+          currentIndex: 0,
           type: BottomNavigationBarType.fixed,
           elevation: 0.0,
           items: [
             BottomNavigationBarItem(
               title: Text(
                 'Search',
-                style: TextStyle(color: Colors.grey),
+                style: TextStyle(color: Colors.red),
               ),
               icon: IconButton(
                 icon: Icon(
                   Icons.search,
-                  color: Colors.grey,
+                  color: Colors.red,
                 ),
                 onPressed: () {
                   Navigator.push(context,
@@ -207,12 +162,12 @@ class Account extends StatelessWidget {
             BottomNavigationBarItem(
               title: Text(
                 'Account',
-                style: TextStyle(color: Colors.red),
+                style: TextStyle(color: Colors.grey),
               ),
               icon: IconButton(
                 icon: Icon(
                   Icons.account_circle,
-                  color: Colors.red,
+                  color: Colors.grey,
                 ),
                 onPressed: () {
                   Navigator.push(context,

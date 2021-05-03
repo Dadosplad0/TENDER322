@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tender322/pages/bathroom.dart';
+import 'package:tender322/pages/upload.dart';
 import 'account.dart';
 import 'favorites.dart';
 import 'post.dart';
@@ -82,16 +82,17 @@ class _PostState extends State<Post> {
           backgroundColor: Colors.blueGrey[800],
           appBar: AppBar(
             backgroundColor: Colors.blueGrey[900],
-            title: const Text('Plugin example app'),
+            title: const Text('my estimates'), //**************************
           ),
           body: Column(
+            //************** my uploads listview
             children: <Widget>[
               Center(child: Text('Error: $_error')),
               ElevatedButton(
                 child: Text("Pick images"),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Bathroom()));
+                      MaterialPageRoute(builder: (context) => Upload()));
                 },
               ),
               Expanded(

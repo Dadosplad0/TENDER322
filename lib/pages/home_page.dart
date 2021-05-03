@@ -6,7 +6,7 @@ import 'package:tender322/widget/logged_in_widget.dart';
 import 'package:tender322/widget/sign_up_widget.dart';
 import 'package:provider/provider.dart';
 
-class HomePage extends StatelessWidget {
+class HomePagelogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         body: ChangeNotifierProvider(
