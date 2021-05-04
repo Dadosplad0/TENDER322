@@ -42,6 +42,7 @@ class _PostState extends State<Post> {
     );
   }
 
+//>>>>>>>>>>
   Future<void> loadAssets() async {
     List<Asset> resultList = <Asset>[];
     String error = 'No Error Detected';
@@ -147,10 +148,7 @@ class _PostState extends State<Post> {
                       Icons.add,
                       color: Colors.red,
                     ),
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Favorites()));
-                    },
+                    onPressed: () {},
                   ),
                 ),
                 BottomNavigationBarItem(

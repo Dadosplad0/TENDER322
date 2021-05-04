@@ -4,6 +4,9 @@ import 'package:tender322/provider/google_sign_in.dart';
 
 import 'package:firebase_database/firebase_database.dart';
 
+import '../../../account.dart';
+import '../../../favorites.dart';
+import '../../search.dart';
 import 'posts.dart';
 
 class HomePage extends StatefulWidget {
@@ -93,34 +96,73 @@ class _HomePageState extends State<HomePage> {
                       postsList[index].time);
                 }),
       ), //<<<<<<<<<<<<<<<<<<<<<<<
-      bottomNavigationBar: new BottomAppBar(
-        color: Colors.pink,
-        child: new Container(
-          margin: const EdgeInsets.only(left: 70.0, right: 70.0),
-          child: new Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            mainAxisSize: MainAxisSize.max,
-            children: <Widget>[
-              new IconButton(
-                icon: new Icon(Icons.local_car_wash),
-                iconSize: 50,
-                color: Colors.white,
-                onPressed: _logoutUser,
+      bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.blueGrey[900],
+          type: BottomNavigationBarType.fixed,
+          elevation: 0.0,
+          items: [
+            BottomNavigationBarItem(
+              title: Text(
+                'Search',
+                style: TextStyle(color: Colors.grey),
               ),
-              new IconButton(
-                icon: new Icon(Icons.add_a_photo),
-                iconSize: 50,
-                color: Colors.white,
+              icon: IconButton(
+                icon: Icon(
+                  Icons.search,
+                  color: Colors.grey,
+                ),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return new Upload();
-                  }));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Search()));
                 },
               ),
-            ],
-          ),
-        ),
-      ),
+            ),
+            BottomNavigationBarItem(
+              title: Text(
+                'Favorites',
+                style: TextStyle(color: Colors.grey),
+              ),
+              icon: IconButton(
+                icon: Icon(
+                  Icons.favorite,
+                  color: Colors.grey,
+                ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Favorites()));
+                },
+              ),
+            ),
+            BottomNavigationBarItem(
+              title: Text(
+                'Post',
+                style: TextStyle(color: Colors.red),
+              ),
+              icon: IconButton(
+                icon: Icon(
+                  Icons.add,
+                  color: Colors.red,
+                ),
+                onPressed: () {},
+              ),
+            ),
+            BottomNavigationBarItem(
+              title: Text(
+                'Account',
+                style: TextStyle(color: Colors.grey),
+              ),
+              icon: IconButton(
+                icon: Icon(
+                  Icons.account_circle,
+                  color: Colors.grey,
+                ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Account()));
+                },
+              ),
+            ),
+          ]),
     );
   }
 
@@ -141,20 +183,15 @@ class _HomePageState extends State<HomePage> {
                 ),
                 new Text(
                   description, //= null ?  "true" : "False", //??'default value'
-                  style: Theme.of(context).textTheme.subhead,
+                  style: Theme.of(context).textTheme.subtitle1,
                   textAlign: TextAlign.left,
                 ),
                 new Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     new Text(
-                      date,
-                      style: Theme.of(context).textTheme.subtitle,
-                      textAlign: TextAlign.center,
-                    ),
-                    new Text(
                       time,
-                      style: Theme.of(context).textTheme.subtitle,
+                      style: Theme.of(context).textTheme.subtitle2,
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(

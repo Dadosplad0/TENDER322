@@ -38,13 +38,7 @@ class Building extends StatelessWidget {
                       textAlign: TextAlign.left,
                     ),
                   ),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                HomePagelogin())); //*************************
-                  },
+                  onPressed: () {},
                 ),
               ),
               Divider(
